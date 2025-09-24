@@ -2,6 +2,17 @@
 
 A complete, playable Minesweeper game built with the Rust programming language and the `egui` immediate mode GUI library. This project provides a modern take on the classic game, featuring a clean dark-mode UI, progressive difficulty, and a polished user experience.
 
+
+## Download & Play (for Windows)
+
+The easiest way to play is to download the latest pre-compiled executable from the GitHub Releases page.
+
+**[➡️ Download the latest release here ⬅️]([https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases/](https://github.com/Wisteria-Princess/RustMinesweeper/releases/tag/v1.0.1)**
+
+Simply download the `minesweeper_rust.exe` file from the latest release, save it anywhere on your computer, and double-click to play. No installation is needed!
+
+---
+
 ## Features
 
 -   **Classic Minesweeper Gameplay**: Left-click to reveal tiles and right-click to flag potential mines.
@@ -15,41 +26,50 @@ A complete, playable Minesweeper game built with the Rust programming language a
 -   **Auto-Sizing Window**: The application window launches with the perfect size to fit the game board, and is non-resizable for a clean look.
 -   **Safe Mine Generation**: The mine generation algorithm includes a cap to prevent an impossible-to-win board where every tile is a mine.
 
-## Prerequisites
+## Building from Source
 
-Before you begin, ensure you have the [Rust toolchain](https://www.rust-lang.org/tools/install) installed on your system. This will provide you with `rustc` (the compiler) and `cargo` (the package manager and build tool).
+If you are a developer and want to compile the project yourself, follow these steps.
 
-## How to Run the Project
+### Prerequisites
 
-1.  **Clone the Repository (or download the files):**
+Ensure you have the [Rust toolchain](https://www.rust-lang.org/tools/install) installed on your system. This will provide you with `rustc` (the compiler) and `cargo` (the package manager and build tool).
+
+### Instructions
+
+1.  **Clone the Repository:**
     ```sh
-    git clone <your-repository-url>
-    cd rust-minesweeper
+    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+    cd YOUR_REPOSITORY
     ```
-    Alternatively, create a new Cargo project (`cargo new minesweeper_rust`) and place the provided source files (`main.rs`, `game.rs`, `ui.rs`, `Cargo.toml`) in the correct directories.
 
-2.  **Build and Run:**
-    Use `cargo` to compile and run the application. Cargo will automatically download and compile all the necessary dependencies.
+2.  **Build and Run in Debug Mode:**
+    Use `cargo run` to compile and run the application. Cargo will automatically download all the necessary dependencies.
     ```sh
     cargo run
     ```
 
-    The game window should appear, and you can start playing immediately.
+## Creating Your Own Executable
+
+To create your own optimized, standalone `.exe` file from the source code, you can build the project in *release mode*.
+
+1.  **Hide the Console Window**: Ensure the line `#![windows_subsystem = "windows"]` is at the very top of your `src/main.rs` file. This attribute prevents a console window from appearing behind the game.
+
+2.  **Run the Release Build Command**: Open your terminal in the project's root directory and run:
+    ```sh
+    cargo build --release
+    ```
+
+3.  **Find the Executable**: Your optimized `.exe` file will be located in the `target/release/` directory (e.g., `target/release/minesweeper_rust.exe`). You can copy this single file and run it on any modern Windows computer.
 
 ## Project Structure
 
-The project is organized into three main Rust files to separate concerns:
-
--   `src/main.rs`: The entry point of the application. It is responsible for setting up the game configuration (board size, mine count), calculating the initial window size, and launching the `eframe` application.
-
--   `src/game.rs`: Contains all the core game logic, completely decoupled from the UI. It manages the game state (`Playing`, `Won`, `Lost`), the board data structure, mine placement, cell revealing logic, win/loss conditions, and the level progression system.
-
--   `src/ui.rs`: Handles all rendering and user input. It implements the `eframe::App` trait for our `Minesweeper` struct, drawing the game board, header, and responding to mouse clicks.
-
--   `Cargo.toml`: The project's manifest file. It defines project metadata and lists all the external crates (dependencies) required to build the game.
+-   `src/main.rs`: The application's entry point. Configures and launches the `eframe` window.
+-   `src/game.rs`: Contains all the core game logic, completely decoupled from the UI.
+-   `src/ui.rs`: Handles all rendering and user input via the `egui` library.
+-   `Cargo.toml`: The project's manifest file, defining metadata and dependencies.
 
 ## Key Dependencies
 
--   [**`eframe`**](https://crates.io/crates/eframe): The official application framework for `egui`. It handles the backend windowing, event loop, and rendering pipeline, allowing us to focus on the UI.
--   [**`egui`**](https://crates.io/crates/egui): A powerful and easy-to-use immediate mode GUI library for Rust. Used to draw every part of the user interface.
--   [**`rand`**](https://crates.io/crates/rand): A Rust library for random number generation, used here to randomly place mines on the game board.
+-   [**`eframe`**](https://crates.io/crates/eframe): The official application framework for `egui`.
+-   [**`egui`**](https://crates.io/crates/egui): A powerful and easy-to-use immediate mode GUI library for Rust.
+-   [**`rand`**](https://crates.io/crates/rand): Used for randomly placing mines on the game board.
