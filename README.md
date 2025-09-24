@@ -2,9 +2,6 @@
 
 A complete, playable Minesweeper game built with the Rust programming language and the `egui` immediate mode GUI library. This project provides a modern take on the classic game, featuring a clean dark-mode UI, progressive difficulty, and a polished user experience.
 
-![image](https://i.imgur.com/gA3gY4A.png)
-*(Feel free to replace this placeholder image with a screenshot of your own game running!)*
-
 ## Features
 
 -   **Classic Minesweeper Gameplay**: Left-click to reveal tiles and right-click to flag potential mines.
