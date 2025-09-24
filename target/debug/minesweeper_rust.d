@@ -1,1 +1,0 @@
-C:\Users\Lord_\OneDrive\Documents\projects\minesweeper_rust\target\debug\minesweeper_rust.exe: C:\Users\Lord_\OneDrive\Documents\projects\minesweeper_rust\src\game.rs C:\Users\Lord_\OneDrive\Documents\projects\minesweeper_rust\src\main.rs C:\Users\Lord_\OneDrive\Documents\projects\minesweeper_rust\src\ui.rs
