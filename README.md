@@ -38,8 +38,8 @@ Ensure you have the [Rust toolchain](https://www.rust-lang.org/tools/install) in
 
 1.  **Clone the Repository:**
     ```sh
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-    cd YOUR_REPOSITORY
+    git clone https://github.com/Wisteria-Princess/RustMinesweeper
+    cd RustMinesweeper
     ```
 
 2.  **Build and Run in Debug Mode:**
