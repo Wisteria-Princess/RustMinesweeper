@@ -7,7 +7,7 @@ A complete, playable Minesweeper game built with the Rust programming language a
 
 The easiest way to play is to download the latest pre-compiled executable from the GitHub Releases page.
 
-**[➡️ Download the latest release here ⬅️]([https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases/](https://github.com/Wisteria-Princess/RustMinesweeper/releases/tag/v1.0.1)**
+**[➡️ Download the latest release here ⬅️]([https://github.com/Wisteria-Princess/RustMinesweeper/releases/tag/v1.0.1](https://github.com/Wisteria-Princess/RustMinesweeper/releases/tag/v1.0.1)**
 
 Simply download the `minesweeper_rust.exe` file from the latest release, save it anywhere on your computer, and double-click to play. No installation is needed!
 
